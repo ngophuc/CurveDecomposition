@@ -1,4 +1,4 @@
-#include "myfunctions.h"
+#include "functions.h"
 double sort_increase(double a, double b)
 {
     return a<b;
@@ -6,15 +6,6 @@ double sort_increase(double a, double b)
 
 vector<int> absSortIndex(vector<double> const& values, bool isIncrease)
 {
-    /*
-    vector<int> indices(values.size());
-    iota(begin(indices), end(indices), static_cast<int>(0));
-    if(isIncrease)
-        sort( begin(indices), end(indices), [&](int a, int b) { return fabs(values[a])<fabs(values[b]); } );
-    else//decrease
-        sort( begin(indices), end(indices), [&](int a, int b) { return fabs(values[a])>fabs(values[b]); } );
-    return indices;
-    */
     vector<int> indices;
     for(size_t i=0;i<values.size();i++)
         indices.push_back(i);

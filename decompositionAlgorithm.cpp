@@ -1,4 +1,4 @@
-#include "testfunctions.h"
+#include "decompositionAlgorithm.h"
 
 void drawCanvas(Board2D &aBoard, unsigned int w, unsigned int h){
     aBoard.setLineWidth(0);

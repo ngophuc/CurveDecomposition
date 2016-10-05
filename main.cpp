@@ -4,8 +4,8 @@
 #include <boost/program_options/parsers.hpp>
 #include <boost/program_options/variables_map.hpp>
 
-#include "myfunctions.h"
-#include "testfunctions.h"
+#include "functions.h"
+#include "decompositionAlgorithm.h"
 
 namespace po=boost::program_options;
 using namespace std;

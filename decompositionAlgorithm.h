@@ -12,7 +12,7 @@
 #include "DGtal/geometry/curves/SaturatedSegmentation.h"
 #include <DGtal/geometry/curves/AlphaThickSegmentComputer.h>
 
-#include "myfunctions.h"
+#include "functions.h"
 
 using namespace std;
 using namespace DGtal;
