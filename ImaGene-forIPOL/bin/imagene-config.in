@@ -1,0 +1,52 @@
+#! /bin/bash
+
+# Script permettant de positionner rapidement les flags de gcc pour
+# utiliser la biblioth�que dans des applications.
+
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+includedir=@includedir@
+version=@VERSION@
+libdir=@libdir@
+
+ldflags="-L${libdir}"
+cppflags="-I${includedir}"
+libs="-lImaGene"
+
+
+# --- On traite le cas ou il y a des arguments ---
+case $# in
+    1)
+        case $1 in
+            "--version")
+                echo "${version}"
+                exit 0;;
+            "--cppflags")
+                echo "${cppflags}"
+                exit 0;;
+
+            "--cxxflags")
+                echo "-Wall"
+                exit 0;;
+
+            "--ldflags")
+                echo "${ldflags}"
+                exit 0;;
+
+            "--libs")
+                echo "${libs}"
+                exit 0;;
+        esac;;
+esac
+
+
+# --- S'il n'y a pas les bons arguments ---
+echo "Usage: imagene-config [OPTIONS]"
+echo "Options:"
+echo "        --version"
+echo "        --cppflags"
+echo "        --cxxflags"
+echo "        --ldflags"
+echo "        --libs"
+exit 1;
+

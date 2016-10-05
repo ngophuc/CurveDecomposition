@@ -1,0 +1,84 @@
+-------------------------------------------------------------------------------
+ImaGene-forIPOL
+        (c) Jacques-Olivier Lachaud (and adapted with no dependancies by Bertrand Kerautret)
+-------------------------------------------------------------------------------
+
+Should work on Linux and MacOSX platforms. (tested on Ubuntu, Debian, MacOS)
+
+I) Installation quick way (separate build, preferred way)
+------------------------------------------
+
+>	git clone https://github.com/kerautret/ImaGene-forIPOL.git
+>	cd ImaGene-forIPOL
+>	mkdir build 
+>	cd build 
+>	cmake ..
+>	make
+>	make install
+
+Once installed, you can remove everything in directory 'build' with
+
+>       rm -rf build
+
+
+II) Installation quick way (in-source build)
+--------------------------------------------
+
+>	git clone https://github.com/kerautret/ImaGene-forIPOL.git
+>	cd ImaGene-forIPOL
+>	cmake .
+>	make install
+
+
+III) Installation (details)
+---------------------------
+
+1) First you can get the sources by cloning the main directory (using git program)
+
+>       git clone https://github.com/kerautret/ImaGene-forIPOL.git
+or if you have not git you can simply download the source available here:
+https://github.com/kerautret/ImaGene-forIPOL/archive/v0.2.tar.gz
+
+2) After unpacking the sources, go into the directory
+
+>	cd ImaGene-forIPOL
+
+3) Then create a separate directory for the build.
+
+>  	mkdir build
+>	cd build
+
+
+4) Then call 'cmake' within directory 'build', either as
+
+>	cmake ..
+
+Or, if you wish debug version.
+
+>	cmake -DCMAKE_BUILD_TYPE:STRING=Debug ..
+
+If you wish to change install directory to MYDIR, you may call 'cmake' with
+
+>	cmake -DINSTALL_PREFIX:STRING=MYDIR ..
+
+4) Then, compile everything with
+
+>	make
+
+5) You may then install ImaGene with
+
+>	make install
+
+By default, it is in /usr/local subdirectories. You may need
+administrator privileges to perform this task. Just type
+
+>	sudo make install
+
+6) To remove all files created for building everything, you may just
+remove the directory 'build' for instance with
+
+>      cd ..
+>      rm -rf build
+
+
+

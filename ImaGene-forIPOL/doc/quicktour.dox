@@ -1,0 +1,201 @@
+
+/**
+ @page quick_tour A quick tour of ImaGene
+
+ [ @b previous @ref objectives ] 
+ [ @b next @ref digital_spaces ]  
+
+In this section, you will learn with simple programs the basic use of
+ImaGene objects.
+
+-# @ref example_1_1
+-# @ref example_1_2
+-# @ref example_1_3
+-# @ref example_1_3b
+-# @ref example_1_4
+-# @ref example_1_5
+-# @ref example_1_6
+
+@section example_1_1 A first 3D example: creation of a 3D space, a ball of radius 4 within, then extraction of its boundary by tracking 
+
+This example shows how to create a 3D digital space of size 32x32x32
+(KnSpace object), then a ball of radius 4 centered on voxel (12,13,14)
+(stored in a KnCharSet object, a set of cells defined as a
+characteristic function). Afterwards, a surfel on the boundary of the
+ball is extracted. Then, from this surfel, the whole boundary of the
+ball is extracted by a digital surface tracking algorithm.
+
+@include example-1-1.cxx
+
+We will explain later why the coordinates of the center voxel are
+computed like this. You may already notice that cells, whatever their
+type or dimension, are stored as Kn_uid or Kn_sid variables. These
+types are just integer numbers (32 bits in the 32 bits version of
+ImaGene, 64 bits otherwise).
+
+The output looks like
+
+@code
+ --- ball has 257 voxels.
+ --- sphere has 294 surfels.
+@endcode
+
+@section example_1_2 Going nD: a loop creating space, ball and boundary extraction, with increasing dimensions
+
+In the previous example, it was not clear that ImaGene could manage
+digital space of arbitrary dimension indifferently. The following
+example shows that it can creates spaces and objects of dimension from
+2D to 7D (here) with a single loop. The user must just specify the
+coordinates of the center of the ball in nD.
+
+@include example-1-2.cxx 
+
+Cells are still represented as Kn_uid variables (for \b unsigned
+cells) or Kn_sid variables (for \b signed cells). Sets of cells are
+represented either by a KnCharset object (efficient for sets of
+n-cells in a nD space, or for sets of arbitrary cells in nD) or by a
+KnRCellSet object (optimized for sets of k-cells in a nD space, for
+0<k<n).
+
+The output looks like
+
+@code
+ - Dimension is 2.
+ --- ball has 5 voxels.
+ --- sphere has 12 surfels.
+ - Dimension is 3.
+ --- ball has 7 voxels.
+ --- sphere has 30 surfels.
+ - Dimension is 4.
+ --- ball has 9 voxels.
+ --- sphere has 56 surfels.
+ - Dimension is 5.
+ --- ball has 11 voxels.
+ --- sphere has 90 surfels.
+ - Dimension is 6.
+ --- ball has 13 voxels.
+ --- sphere has 132 surfels.
+ - Dimension is 7.
+ --- ball has 15 voxels.
+ --- sphere has 182 surfels.
+ - Dimension is 8.
+[KnSpace::init] Not enough bits.
+@endcode
+
+The mysterious "[KnSpace::init] Not enough bits." will be explain later: 
+this error is related to the way ImaGene deals with spaces of arbitrary 
+dimensions. 
+
+@section example_1_3 Some 2D geometry: Freeman chain code and PGM export.
+
+ImaGene provides also many tools to deal with 2D digital
+pictures. This is a small example to show how to convert a closed
+4-connected contour into its set of interior pixels, then save it as a
+PGM picture.
+
+@include example-1-3.cxx 
+
+The output when saved in a PGM file gives the following picture:
+
+@image html flower-1-3.png
+
+You may have noticed that we used a K2Space instead of a KnSpace
+object. This is just for convenience since K2Space is a specialization
+of a KnSpace.
+
+
+@section example_1_3b Exporting a 3d shape to 3dPGM
+
+@include example-1-3b.cxx
+
+
+The output can be visualized by volume rendering (for example osiriX):
+
+@image html rendering-1-3b.png
+
+
+
+
+
+@section example_1_4 Further 2D geometry: extracting maximal segments
+
+The following example looks a bit more complex. It computes and
+displays the tangent vectors of the maximal segments of a digital
+contour. Most of the complexity comes from a simple fact. ImaGene does
+not assume any embedding for 4-connected contours. For ImaGene, a
+4-connected contour is an abstract object where an iterator can
+advance or go back, and when it does, it may go straight or turn left
+or turn right or stop. Therefore, one has to embed the contour in the
+plane again (because a Freeman chain is already embedded). This is
+mainly done through the use of a Frame2D object.
+
+One may wonder why a 4-connected contour is not always embedded in the
+plane. The best reason is that 4-connected contours can lie in nD
+spaces. For instance the boundary of a digital 3D object cut by some
+orthogonal plane is a 4-connected contour. Several nD geometric
+estimators provided by ImaGene use this fact.
+
+@include example-1-4.cxx 
+
+The output looks like
+
+@code
+[0] tgt=(1,2)
+[1] tgt=(-1,2)
+[2] tgt=(-2,1)
+[3] tgt=(-2,-1)
+[4] tgt=(-1,-2)
+[5] tgt=(1,-2)
+[6] tgt=(2,-1)
+[7] tgt=(2,1)
+@endcode
+
+@section example_1_5 Further 2D geometry: estimating the tangent direction at each surfel centroid along a digital contour with the lambda-MST estimator.
+
+This example follows the same lines as the previous one. First it builds a Freeman chain code representing a digital circle of radius 4. Then, it calls a function which computes for each surfel its estimated tangent. You may note that an iterator is used to move along the Freeman chain code. The lambda-MST estimator has been shown to have an excellent behavior for digitization of smooth or polygonal shapes. It relies on the local computation of the pencil of maximal segments and on a convex combination of the associated digital slopes.
+
+@include example-1-5.cxx 
+
+The output looks like angles progressively and regularly increasing from Pi/2 to Pi/2 (mod 2Pi), which is something expected from a digital disk.
+
+
+
+
+
+@section example_1_6 Extracting surfel boundary from pgm image.
+
+The following example shows how to extract a contour from a set of
+pixels. The pixel set is extracted from a given threshold (128). After
+computing the set of boundary surfels, the contour is scanned by using
+a contour iterator. The surfel and their centers are displayed using
+XFIG tools.
+
+
+
+@include example-1-6.cxx 
+
+
+To display the contour we can use the following commands: 
+
+@code
+convert contour.pgm contourSrc.jpeg             
+## report the image dimension in the source code (here 32x32)
+example-1-6 < contour.pgm > tmp.fig
+fig2dev -L png tmp.fig tmp.png
+
+@endcode
+
+
+@image html flower-1-6.png
+
+
+
+
+
+ [ @b previous @ref objectives ] 
+ [ @b next @ref digital_spaces ] 
+
+
+
+
+ */

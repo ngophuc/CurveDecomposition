@@ -1,0 +1,50 @@
+/**
+ @page objectives Objectives of ImaGene
+
+ [ @b up @ref user_guide ] 
+ [ @b next @ref quick_tour ] 
+
+ This library is meant for developing applications that deals with
+ digital images, digital shapes, and their boundaries. It is designed
+ so that most algorithms can be written independently of space
+ dimension. For instance, digital surface tracking is written once and
+ for all in nD with a few lines. Of course, specific algorithms can
+ also be written, but the whole point of ImaGene is to demonstrate
+ that the gain is noticeable generally only in 2D. It is thus better
+ to design generic algorithms, which capture their essence, than to
+ spent a lot of time to tailor it to each dimension.
+
+ A lot of algorithms are already written in ImaGene such as:
+
+ - standard shapes creation (disks, ellipses, flowers, rotated
+ cubes, balls, ellipsoids, implicit surfaces, etc)
+ 
+ - boundary extraction, boundary tracing or digital surface tracking, marching-cube like algorithm
+
+ - set operations on digital cells
+
+ - a lot of 2D digital geometry (many geometric estimators, digital
+ straight segment recognition, etc)
+
+ - some nD geometry (area computation, normal vector field, some
+ curvature estimators)
+
+ - in 2D, several exports/imports with PGM, freeman chain codes, XFIG
+   are possible.
+
+Of course, ImaGene is not designed for every purpose, and we may for
+instance note that you should better use another library if you wish
+
+- to do signal processing,
+- to do morphological operations,
+- to process non digital data.
+
+In fact, ImaGene is optimized for all processing that involve various
+cells of digital spaces, such as 1-cells (linels) in 2D images, or
+2-cells (surfels) in 3D images. If you only deal with pixels or voxels, ImaGene will add some complexity to your programs and may
+slow their implementation.
+
+ [ @b previous @ref user_guide ] 
+ [ @b next @ref quick_tour ] 
+
+ */

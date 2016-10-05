@@ -1,0 +1,28 @@
+Start testing: Dec 18 17:02 CET
+----------------------------------------------------------
+Changing directory into: /Users/lachaud/ImaGene-1.6/tests
+1/2 Testing: K2Space-slinel1
+1/2 Test: K2Space-slinel1
+Command: "/Users/lachaud/ImaGene-1.6/tests/test_K2Space" "-input" "chain3.fc" "-trace" "0" "-timing" "0" "-test_slinel" 
+Directory: /Users/lachaud/ImaGene-1.6/tests
+"K2Space-slinel1" start time: Dec 18 17:02 CET
+Output:
+----------------------------------------------------------
+----------------------------------------------------------
+"K2Space-slinel1" end time: Dec 18 17:02 CET
+"K2Space-slinel1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: K2Space-slinel2
+2/2 Test: K2Space-slinel2
+Command: "/Users/lachaud/ImaGene-1.6/tests/test_K2Space" "-input" "chain.fc" "-trace" "0" "-timing" "0" "-test_slinel" 
+Directory: /Users/lachaud/ImaGene-1.6/tests
+"K2Space-slinel2" start time: Dec 18 17:02 CET
+Output:
+----------------------------------------------------------
+----------------------------------------------------------
+"K2Space-slinel2" end time: Dec 18 17:02 CET
+"K2Space-slinel2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 18 17:02 CET

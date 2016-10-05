@@ -1,0 +1,14 @@
+language: cpp
+
+compiler:
+  - gcc
+  - clang
+
+env:
+  - BTYPE="" 
+
+
+script: 
+  - cmake . $BTYPE
+  - make
+

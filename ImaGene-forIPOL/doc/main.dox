@@ -1,0 +1,11 @@
+/**
+ * @mainpage Documentation of ImaGene
+ * @author Jacques-Olivier Lachaud
+ * @version 1.6.0
+ *
+ * This documentation is a work in progress. It should help in
+ * learning to use ImaGene for nD digital imaging.
+ *
+ - @subpage user_guide
+ - @subpage faq
+ */

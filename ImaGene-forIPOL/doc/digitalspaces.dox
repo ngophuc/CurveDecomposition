@@ -1,0 +1,127 @@
+/**
+ @page digital_spaces Digital spaces and cells
+
+ [ @b previous @ref quick_tour ] 
+ [ @b up @ref user_guide ] 
+
+ In this section, you will discover the paradigm chosen in ImaGene to
+ represent digital spaces as generically and efficiently as possible.
+ 
+ -# @ref cellular_grid
+ -# @ref cells
+
+ @section cellular_grid The digital space is a cubic grid
+
+ @subsection math_background Images and digital spaces
+
+ 2D images are often seen as two dimensional arrays, where each cell
+ is a pixel with some value (a gray level, a color). If
+ \f$\mathbf{Z}\f$ is the set of integer numbers, then an image is a
+ map from a rectangular subset of \f$\mathbf{Z} \times \mathbf{Z}\f$
+ to some space (gray levels, colors).
+
+ More generally, a nD image is a map from a parallelepipedic subset of
+ \f$\mathbf{Z}^n\f$ to some space (gray levels, colors).
+
+ Many algorithms need to represent positions in images (ie pixels and
+ voxels), in order to represent regions in images. Often, we need also
+ to measure the shape of a region, for instance its perimeter, or we
+ may be interested in the interface between two regions. In these
+ cases, it is often convenient (and generally it is also the theoretic
+ way) to represent other elements in digital spaces, such as paths
+ in-between regions, the thin boundary or surface of a region, etc. We
+ need in this case to represent not only the "squares" (pixels) or
+ "cubes" (voxels) of images, but also their faces, edges, vertices.
+
+ We therefore model not only n-dimensional cells (the hypercubes in
+ nD), but also all the lower dimensional cells of the space. For
+ instance, in 2D, we have:
+
+ - 2-dimensional cells (open unit square) = pixels
+ - 1-dimensional cells (open unit segment) = linels
+ - 0-dimensional cells (closed point) = pointels
+
+ @image html images/khalimsky-2d.png
+
+ They form a cellular decomposition of the Euclidean plane into unit
+ squares with their edges and vertices. In nD, this decomposition is
+ called the \b cellular \b grid or \b cubical \b grid.
+
+ 
+ @subsection khalimsky Cells in the cubical grid
+ 
+ We use now the regularity of the cubical grid to represent it
+ efficiently. In 1D, the cubical grid is a simple line alternating
+ closed points {k} and open unit segments (k,k+1). Khalimsky noticed that this
+ (topological) space is homeomorphic to the integer set
+ \f$\mathbf{Z}\f$, if we declare every even integer as closed and
+ every odd integer as open.
+
+ A digital cell in 1D is thus just an integer. Its topology is defined
+ by its parity. The cell 2k is the closed point {k}; the cell 2k+1 is
+ the open segment (k,k+1).
+
+ In 2D, we use the fact that \f$\mathbf{Z}^2\f$ is a cartesian
+ product. A digital cell in 2D is thus a couple of integer
+ - (2i, 2j): a pointel which is the point set {(i,j)} in the plane
+ - (2i+1, 2j): an horizontal linel which is the open segment {(i,i+1) x j} in the plane.
+ - (2i, 2j+1): a vertical linel which is the open segment {i x (j,j+1)} in the plane.
+ - (2i+1, 2j+1): a pixel which is the open square {(i,i+1) x (j,j+1)} in the plane.
+
+In nD, the principle is the same. A cell is thus uniquely identifed by
+an n-tuple of integers whose parities define the topology of the
+cell. These integers are called the @b Khalimsky @b coordinates of the
+cell.
+
+@subsection cell_is_integer A cell is coded as one integer
+
+In some sense, one could stop here and argue that a cell as an n-tuple
+of integer is generic enough. The user has just to declare an array of
+n integers to define a cell. However, such generic programming
+requires a lot of dynamic allocation at runtime.
+
+Therefore, we choose another route. The user will work in a digital
+space of finite dimension, generally the size of the processed
+image. Since the sizes are known and fixed, any coordinate can be
+coded with a fixed number of bits. We can thus group together all the
+coordinates to define one integer, which is called the @b code of the
+cell.
+
+For instance, if one wish to designate the voxel (10,5,7) in a 3D
+digital image of size 32x32x16, he could use the following code snippet
+
+@code
+Kn_size sizes = {32,32,16};
+KnSpace ks( 3, sizes );
+Kn_size xyzk = {2*10+1, 5*2+1, 7*2+1};
+Kn_uid voxel_code = ks.ukcode( xyzk );
+@endcode
+
+@verbatim
+The code 'voxel_code' has the following binary code
+      11101110010101010
+      zyx< z>< y >< x >
+topology>< coordinates>
+      1111111            bits
+      65432109876543210
+@endverbatim
+
+Since a voxel is open along its 3 coordinates (a cube in space), its
+Khalimsky coordinates are all odd. For other cells, you just adapt the
+parity. You then notice that its topology is all ones.
+
+Note that you never manipulate the code of a cell directly. The
+ImaGene::KnSpace or any of its subclass gives all the operations to
+process them, and is written to be as efficient as possible.
+
+@subsection oriented_cells Unoriented and oriented cells
+
+
+
+@section cells Operations on cells
+
+
+ [ @b previous @ref quick_tour ] 
+ [ @b up @ref user_guide ] 
+
+ */
