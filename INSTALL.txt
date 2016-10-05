@@ -1,0 +1,39 @@
+
+Dependancies:
+-------------
+This program is based on the DGtal Library. You need to install the last version available here:
+https://github.com/DGtal-team/DGtal
+
+Note that as DGtal installation required the boost library which is also used in this programm.
+
+git clone https://github.com/DGtal-team/DGtal.git
+cd DGtal ; mkdir buid ; cd build
+cmake ..
+make install
+
+
+
+
+
+Main installation:
+-------------------
+
+To install the tools you have to follow the following steps:
+
+- ImaGene installation (ImaGene-forIPOL)
+  From the CurveDecomposition directory do in a terminal:
+    cd ImaGene-forIPOL
+    mkdir build; cd build
+    cmake ..
+    make -j 5
+    
+- Main tool installation:
+  From the CurveDecomposition directory:
+    mkdir build
+    cd build
+    cmake ..
+    make -j 5
+    
+  
+
+
