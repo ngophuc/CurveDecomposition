@@ -17,7 +17,7 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/RRPR_demo/
 
 <p>File <a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/pentagonNoise4.sdp">pentagonNoise4.sdp</a>: </p>&#x000A;&#x000A;
 <pre class="code highlight js-syntax-highlight plaintext">
-<code>./testContourDecom -i ../Samples/pentagonNoise4.sdp -o ../Results/pentagonNoise4 -d ../ImaGene-forIPOL &#x000A; --samplingStep 1.0 --maxScale 10 -a 0.78 -t 0.2 -n 3 -s 4.0</code>
+<code>./testContourDecom -i ../Samples/pentagonNoise4.sdp -o ../Results/pentagonNoise4 -d ../ImaGene-forIPOL &#x000A; --maxScale 10 --samplingStep 1.0 --alphaMax 0.78 --thickness 0.2 --isseTol 4.0 --nbPointCircle 3</code>
 </pre>&#x000A;&#x000A;
 <p>
 	<table cellpadding="5">
@@ -42,7 +42,7 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/RRPR_demo/
 
 <p>File <a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.sdp">circle50.sdp</a>: </p>&#x000A;&#x000A;
 <pre class="code highlight js-syntax-highlight plaintext">
-<code>./testContourDecom -i ../Samples/circle50.sdp -o ../Results/circle50 -d ../ImaGene-forIPOL &#x000A; --samplingStep 1.0 --maxScale 10 -a 0.78 -t 0.2 -n 3 -s 4.0</code>
+<code>./testContourDecom -i ../Samples/circle50.sdp -o ../Results/circle50 -d ../ImaGene-forIPOL &#x000A; --maxScale 10 --samplingStep 1.0 --alphaMax 0.78 --thickness 0.2 --isseTol 4.0 --nbPointCircle 3</code>
 </pre>&#x000A;&#x000A;
 <p>
 	<table cellpadding="5">
@@ -67,7 +67,7 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/RRPR_demo/
 
 <p>File <a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50Noise4.sdp">circle50Noise4.sdp</a>: </p>&#x000A;&#x000A;
 <pre class="code highlight js-syntax-highlight plaintext">
-<code>./testContourDecom -i ../Samples/circle50Noise4.sdp -o ../Results/circle50Noise4 -d ../ImaGene-forIPOL &#x000A; --samplingStep 1.0 --maxScale 10 -a 0.78 -t 0.2 -n 3 -s 4.0</code>
+<code>./testContourDecom -i ../Samples/circle50Noise4.sdp -o ../Results/circle50Noise4 -d ../ImaGene-forIPOL &#x000A; --maxScale 10 --samplingStep 2.0 --alphaMax 0.78 --thickness 0.2 --isseTol 4.0 --nbPointCircle 3</code>
 </pre>&#x000A;&#x000A;
 <p>
 	<table cellpadding="5">
@@ -92,7 +92,7 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/RRPR_demo/
 
 <p>File <a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/CircleRect.sdp">CircleRect.sdp</a>: </p>&#x000A;&#x000A;
 <pre class="code highlight js-syntax-highlight plaintext">
-<code>./testContourDecom -i ../Samples/CircleRect.sdp -o ../Results/CircleRect -d ../ImaGene-forIPOL &#x000A; --samplingStep 1.0 --maxScale 10 -a 0.78 -t 0.2 -n 3 -s 4.0</code>
+<code>./testContourDecom -i ../Samples/CircleRect.sdp -o ../Results/CircleRect -d ../ImaGene-forIPOL &#x000A; --maxScale 10 --samplingStep 0.2 --alphaMax 0.78 --thickness 0.4 --isseTol 4.0 --nbPointCircle 3</code>
 </pre>&#x000A;&#x000A;
 <p>
 	<table cellpadding="5">
@@ -117,7 +117,7 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/RRPR_demo/
 
 <p>File <a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/exemple13_KNoise_03.sdp">exemple13_KNoise_03.sdp</a>: </p>&#x000A;&#x000A;
 <pre class="code highlight js-syntax-highlight plaintext">
-<code>./testContourDecom -i ../Samples/exemple13_KNoise_03.sdp -o ../Results/exemple13_KNoise_03 -d ../ImaGene-forIPOL &#x000A; --samplingStep 1.0 --maxScale 10 -a 0.78 -t 0.2 -n 3 -s 4.0</code>
+<code>./testContourDecom -i ../Samples/exemple13_KNoise_03.sdp -o ../Results/exemple13_KNoise_03 -d ../ImaGene-forIPOL &#x000A; --maxScale 10 --samplingStep 1.0 --alphaMax 0.78 --thickness 0.2 --isseTol 4.0 --nbPointCircle 3</code>
 </pre>&#x000A;&#x000A;
 <p>
 	<table cellpadding="5">
@@ -142,7 +142,7 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/RRPR_demo/
 
 <p>File <a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/symbol004_KNoise_05.sdp">symbol004_KNoise_05.sdp</a>: </p>&#x000A;&#x000A;
 <pre class="code highlight js-syntax-highlight plaintext">
-<code>./testContourDecom -i ../Samples/symbol004_KNoise_05.sdp -o ../Results/symbol004_KNoise_05 -d ../ImaGene-forIPOL &#x000A; --samplingStep 1.0 --maxScale 10 -a 0.78 -t 0.2 -n 3 -s 4.0</code>
+<code>./testContourDecom -i ../Samples/symbol004_KNoise_05.sdp -o ../Results/symbol004_KNoise_05 -d ../ImaGene-forIPOL &#x000A; --maxScale 10 --samplingStep 1.0 --alphaMax 0.78 --thickness 0.2 --isseTol 4.0 --nbPointCircle 3</code>
 </pre>&#x000A;&#x000A;
 <p>
 	<table cellpadding="5">
@@ -167,7 +167,7 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/RRPR_demo/
 
 <p>File <a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/example7_KNoise_07.sdp">example7_KNoise_07.sdp</a>: </p>&#x000A;&#x000A;
 <pre class="code highlight js-syntax-highlight plaintext">
-<code>./testContourDecom -i ../Samples/example7_KNoise_07.sdp -o ../Results/example7_KNoise_07 -d ../ImaGene-forIPOL &#x000A; --samplingStep 1.0 --maxScale 10 -a 0.78 -t 0.2 -n 3 -s 4.0</code>
+<code>./testContourDecom -i ../Samples/example7_KNoise_07.sdp -o ../Results/example7_KNoise_07 -d ../ImaGene-forIPOL &#x000A; --maxScale 10 --samplingStep 1.0 --alphaMax 0.78 --thickness 0.2 --isseTol 4.0 --nbPointCircle 3</code>
 </pre>&#x000A;&#x000A;
 <p>
 	<table cellpadding="5">
