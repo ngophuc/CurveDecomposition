@@ -24,7 +24,7 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/RRPR_demo/
 		<tr>
 		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.png">
-				<img src="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.png" alt="Input curve" />
+				<img width="300" src="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.png" alt="Input curve" />
 			</a>	
 		<br />
 		Input curve
@@ -32,7 +32,7 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/RRPR_demo/
 
 		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.png">
-				<img src="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.png" alt="Dominant points" />
+				<img width="300" src="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.png" alt="Dominant points" />
 			</a>
 		<br />
 		Dominant point detected 
@@ -40,7 +40,7 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/RRPR_demo/
 
 		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.png">
-				<img src="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.png" alt="Decomposition result" />
+				<img width="300" src="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.png" alt="Decomposition result" />
 			</a>
 		<br />
 		Decomposition result
