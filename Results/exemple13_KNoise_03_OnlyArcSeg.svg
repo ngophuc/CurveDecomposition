@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="8643.76mm"
+   height="4420.7mm"
+   viewBox="0 0 24502 12531.1"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="exemple13_KNoise_03_onlyDecSA_ATC.svg">
+  <metadata
+     id="metadata32">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs30" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="644"
+     inkscape:window-height="480"
+     id="namedview28"
+     showgrid="false"
+     inkscape:zoom="0.043098529"
+     inkscape:cx="9489.2284"
+     inkscape:cy="1653.2692"
+     inkscape:window-x="366"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <desc
+     id="desc4">output.svg, created with the Board library (Copyleft) 2007 Sebastien Fourey</desc>
+  <path
+     fill="none"
+     stroke="rgb(255,0,0)"
+     stroke-width="17.639mm"
+     style="stroke-linecap:butt;stroke-linejoin:miter"
+     d="M 6238.94,12481.4 A 6063.35 6063.35 0 0 0 12191.7,7690.82"
+     id="path6" />
+  <path
+     fill="none"
+     stroke="rgb(255,0,0)"
+     stroke-width="17.639mm"
+     style="stroke-linecap:butt;stroke-linejoin:miter"
+     d="M 12211.4,7683.79 A 6084.7 6084.7 0 0 0 18135.8,12531"
+     id="path8" />
+  <path
+     fill="none"
+     stroke="rgb(255,0,0)"
+     stroke-width="17.639mm"
+     style="stroke-linecap:butt;stroke-linejoin:miter"
+     d="M 17629.6,12285 A 6162.96 6162.96 0 0 1 12187,6530.62"
+     id="path10" />
+  <path
+     fill="none"
+     stroke="rgb(255,0,0)"
+     stroke-width="17.639mm"
+     style="stroke-linecap:butt;stroke-linejoin:miter"
+     d="M 12180.2,6528.46 A 6093.35 6093.35 0 0 1 6936.16,12282.8"
+     id="path12" />
+  <line
+     x1="6206.74"
+     y1="11860.6"
+     x2="6263.43"
+     y2="12455.9"
+     fill="none"
+     stroke="rgb(0,255,0)"
+     stroke-width="17.639mm"
+     style="stroke-linecap:butt;stroke-linejoin:miter"
+     id="line14" />
+  <line
+     x1="18140.6"
+     y1="12512.6"
+     x2="18055.6"
+     y2="6361.39"
+     fill="none"
+     stroke="rgb(0,255,0)"
+     stroke-width="17.639mm"
+     style="stroke-linecap:butt;stroke-linejoin:miter"
+     id="line16" />
+  <line
+     x1="18055.6"
+     y1="6361.39"
+     x2="17800.4"
+     y2="6361.39"
+     fill="none"
+     stroke="rgb(0,255,0)"
+     stroke-width="17.639mm"
+     style="stroke-linecap:butt;stroke-linejoin:miter"
+     id="line18" />
+  <line
+     x1="17800.4"
+     y1="6361.39"
+     x2="17630.4"
+     y2="12257.5"
+     fill="none"
+     stroke="rgb(0,255,0)"
+     stroke-width="17.639mm"
+     style="stroke-linecap:butt;stroke-linejoin:miter"
+     id="line20" />
+  <line
+     x1="6943.75"
+     y1="12257.5"
+     x2="6688.63"
+     y2="6446.42"
+     fill="none"
+     stroke="rgb(0,255,0)"
+     stroke-width="17.639mm"
+     style="stroke-linecap:butt;stroke-linejoin:miter"
+     id="line22" />
+  <line
+     x1="6688.63"
+     y1="6446.42"
+     x2="6320.13"
+     y2="6361.39"
+     fill="none"
+     stroke="rgb(0,255,0)"
+     stroke-width="17.639mm"
+     style="stroke-linecap:butt;stroke-linejoin:miter"
+     id="line24" />
+  <line
+     x1="6320.13"
+     y1="6361.39"
+     x2="6178.39"
+     y2="11860.6"
+     fill="none"
+     stroke="rgb(0,255,0)"
+     stroke-width="17.639mm"
+     style="stroke-linecap:butt;stroke-linejoin:miter"
+     id="line26" />
+</svg>
