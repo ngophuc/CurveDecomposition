@@ -15,7 +15,7 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/RRPR_demo/
 
 # Examples
 
-<p>File <a herf="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.sdp">circle50.sdp: </p>&#x000A;&#x000A;
+<p>File <a herf="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.sdp">circle50.sdp</a>: </p>&#x000A;&#x000A;
 <pre class="code highlight js-syntax-highlight plaintext">
 	<code>./testTriangle -i ../Samples/flower-30-8-3.sdp  -a 30  -c  -o flowerCDTC30.eps --holes ../Samples/flower-30-8-3Holes.sdp&#x000A;ps2pdf -dEPSCrop flowerCDTC30.eps flowerCDTC30.pdf&#x000A;</code>
 </pre>&#x000A;&#x000A;
