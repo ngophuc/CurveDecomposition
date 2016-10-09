@@ -23,24 +23,15 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/RRPR_demo/
 	<table cellpadding="5">
 		<tr>
 		<td align="center" valign="center">
-			<a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.png">
-				<img width="300" src="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.png" alt="Input curve" />
+			<a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.pdf">
+				<img width="300" src="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.pdf" alt="Input curve" />
 			</a>	
 		<br />
 		Input curve
 		</td>
-
 		<td align="center" valign="center">
-			<a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.png">
-				<img width="300" src="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.png" alt="Dominant points" />
-			</a>
-		<br />
-		Dominant point detected 
-		</td>
-
-		<td align="center" valign="center">
-			<a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.png">
-				<img width="300" src="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50.png" alt="Decomposition result" />
+			<a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50_OnlyArcSeg.pdf">
+				<img width="300" src="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/circle50_OnlyArcSeg.pdf" alt="Decomposition result" />
 			</a>
 		<br />
 		Decomposition result
