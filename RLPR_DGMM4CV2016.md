@@ -31,7 +31,7 @@ Fig 10
 - Line 4:
 - Line 5: File <a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/example7_KNoise_07.sdp">example7_KNoise_07.sdp</a>: </p>
 <pre class="code highlight js-syntax-highlight plaintext">
-<code>./testContourDecom -i ../Samples/example7_KNoise_07.sdp -o ../Results/example7_KNoise_07 -d ../ImaGene-forIPOL &#x000A; --maxScale 10 --samplingStep 1.0 --alphaMax 0.78 --thickness 0.2 --isseTol 4.0 --nbPointCircle 3</code>
+<code>./testContourDecom -i ../Samples/example7_KNoise_07.sdp -o ../Results/example7_KNoise_07 -d ../ImaGene-forIPOL --maxScale 10 --samplingStep 1.0 --alphaMax 0.78 --thickness 0.2 --isseTol 4.0 --nbPointCircle 3</code>
 </pre>
 
 Fig 11
