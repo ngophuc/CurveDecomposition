@@ -47,11 +47,11 @@ Fig 11: File <a href="https://github.com/ngophuc/CurveDecomposition/blob/master/
 Fig 12
 - Line 1: File <a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/techImage_1.sdp">techImage_1.sdp</a>
 <pre class="code highlight js-syntax-highlight plaintext">
-<code>./testContourDecom -i ../Samples/techImage_1.sdp -o ../Results/techImage_1 -d ../ImaGene-forIPOL --maxScale 10 --samplingStep 0.2 --alphaMax 0.78 --thickness 0.2 --isseTol 4.0 --nbPointCircle 3</code>
+<code>./testContourDecom -i ../Samples/techImage_1.sdp -o ../Results/techImage_1 -d ../ImaGene-forIPOL --maxScale 10 --samplingStep 1.0 --alphaMax 0.78 --thickness 0.2 --isseTol 15.0 --nbPointCircle 3</code>
 </pre>
 - Line 2: File <a href="https://github.com/ngophuc/CurveDecomposition/blob/master/Samples/techImage_2.sdp">techImage_2.sdp</a>
 <pre class="code highlight js-syntax-highlight plaintext">
-<code>./testContourDecom -i ../Samples/techImage_1.sdp -o ../Results/techImage_1 -d ../ImaGene-forIPOL --maxScale 10 --samplingStep 1.0 --alphaMax 0.78 --thickness 0.2 --isseTol 15.0 --nbPointCircle 3
+<code>./testContourDecom -i ../Samples/techImage_2.sdp -o ../Results/techImage_2 -d ../ImaGene-forIPOL --maxScale 10 --samplingStep 0.2 --alphaMax 0.78 --thickness 0.2 --isseTol 4.0 --nbPointCircle 3
 </code>
 </pre>
 
