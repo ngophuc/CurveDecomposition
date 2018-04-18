@@ -29,9 +29,8 @@ To install the tools you have to follow the following steps:
     
 - Main tool installation:
   From the CurveDecomposition directory:
-    mkdir build
-    cd build
-    cmake ..
+    mkdir build ; cd build
+    cmake .. -DDGtal_DIR=../DGtal/build
     make -j 5
     
   
