@@ -495,11 +495,6 @@ double determineRadius(Point p1, Point p2, Point p3)
     return (distancePoints(p1,center) + distancePoints(p2,center) + distancePoints(p3,center))/3.0;
 }
 
-double determineRadius(RealPoint center, Point p)
-{
-    return distancePoints(p,center);
-}
-
 double arcLength(Point p1, Point p2, Point p3)
 {
     double R=determineRadius(p1,p2,p3);

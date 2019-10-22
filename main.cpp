@@ -98,10 +98,24 @@ int main(int argc, char *argv[])
         std::string contourFile=outputFile+"_"+std::to_string(it_contour)+".sdp";
         writeFile(vecPts.at(it_contour),contourFile.c_str());
         std::string noiseLevelMTFile=outputFile+"MeanThickness_"+std::to_string(it_contour)+".txt";
-        instruction << ImaGeneDIR << "/build/tests/TestCompNoiseDetect/displayNoiseBS -srcPolygon " << contourFile
-                    << " 0 1 CLOSED -setSampling "<<maxMT<<" "<<stepMT
-                    << " -exportNoiseLevel "<< noiseLevelMTFile.c_str();
-        std::system(instruction.str().c_str());
+        if(maxMT==stepMT) {
+            ofstream myfile (noiseLevelMTFile);
+            if (myfile.is_open())
+            {
+                myfile << "# Noise levels exported from displayNoiseBS (source ImaGene):"<<endl;
+                myfile << "# Format X Y noiseLevel"<<endl;
+                for(size_t i=0; i<vecPts.at(it_contour).size(); i++)
+                    myfile <<vecPts.at(it_contour).at(i)[0]<<" "<<vecPts.at(it_contour).at(i)[0]<<" "<<maxMT<<endl;
+                myfile.close();
+            }
+            else cout << "Unable to open file " <<noiseLevelMTFile<<endl;
+        }
+        else {
+            instruction << ImaGeneDIR << "/build/tests/TestCompNoiseDetect/displayNoiseBS -srcPolygon " << contourFile
+                        << " 0 1 CLOSED -setSampling "<<maxMT<<" "<<stepMT
+                        << " -exportNoiseLevel "<< noiseLevelMTFile.c_str();
+            std::system(instruction.str().c_str());
+        }
         vector<double> oneVecMT=readMeanindfulThicknessFile(noiseLevelMTFile.c_str());
         vecMT.push_back(oneVecMT);
     }

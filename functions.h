@@ -101,7 +101,7 @@ double determineRadius(RealPoint p1, RealPoint p2, RealPoint p3);
 RealPoint determineCenter(Point p1, Point p2, Point p3);
 RealPoint determineCenter(Point p1, Point p2, double radius, bool negatif);
 double determineRadius(Point p1, Point p2, Point p3);
-double determineRadius(RealPoint centre, Point p);
+double determineRadius(RealPoint centre, RealPoint p);
 double arcLength(Point p1, Point p2, Point p3);
 
 double iseContourCircle(const vector<RealPoint>& contour, Point p1, Point p2, RealPoint center, double radius);//ise of points between two points p1,p2 w.r.t the circle (center,radius)
