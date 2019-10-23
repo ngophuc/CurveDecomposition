@@ -496,7 +496,7 @@ vector<RealPoint> tangentSpaceTransform(const vector<RealPoint>& DP)
     double l=0.0, a=0.0, totalAngle=0.0;
     vector<double> alpha;
     vector<double> length;
-    double totalLength;
+    double totalLength=0;
 
     //scan the Dominant Points
     alpha.push_back(a);
@@ -563,7 +563,7 @@ int findBestFittingCircle(const vector<RealPoint> aContour, int idStart, int idE
     int oneThird=(idEnd-idStart)/3;
     double ise,radius,minIse=-1;
     int idMin=-1;
-    Point center;
+    RealPoint center;
     for(int idMid=idStart+oneThird ; idMid<(idEnd-oneThird); idMid++)
     {
         center=determineCenter(aContour.at(idStart),aContour.at(idMid%aContour.size()),aContour.at(idEnd%aContour.size()));
@@ -799,7 +799,7 @@ vector<int> arcSegmentDecomposition(const vector<RealPoint> &aContour, const vec
                 arcIntersection.push_back(i);
                 int idEndMid=((idEndPrev+idBegin)/2)%aContour.size();
                 int idMid1=findBestFittingCircle(aContour,idBeginPrev,idEndMid)%aContour.size();
-                Point center1=determineCenter(aContour.at(idBeginPrev),
+                RealPoint center1=determineCenter(aContour.at(idBeginPrev),
                                               aContour.at(idMid1),
                                               aContour.at(idEndMid));
                 double radius1=(determineRadius(center1,aContour.at(idBeginPrev)) +
@@ -823,7 +823,7 @@ vector<int> arcSegmentDecomposition(const vector<RealPoint> &aContour, const vec
 
                 int idBeginMid=((idEndPrev+idBegin)/2)%aContour.size();
                 int idMid2=findBestFittingCircle(aContour,idBeginMid,idEnd)%aContour.size();
-                Point center2=determineCenter(aContour.at(idBeginMid),
+                RealPoint center2=determineCenter(aContour.at(idBeginMid),
                                               aContour.at(idMid2),
                                               aContour.at(idEnd%aContour.size()));
                 double radius2=(determineRadius(center2,aContour.at(idBeginMid)) +
