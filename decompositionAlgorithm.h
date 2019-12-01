@@ -29,7 +29,7 @@ vector<vector<RealPoint> > dominantPointDetection(const vector<vector<AlphaThick
 /**** Dominant points detections ****/
 
 /**** Dominant points selection ****/
-vector<vector<RealPoint> > dominantPointSimplification(const vector<vector<RealPoint> > &DP, const vector<vector<int> >& indexDP, const vector<vector<RealPoint> > &aContour, string filename, unsigned int w=200, unsigned int h=200);
+vector<vector<RealPoint> > dominantPointSimplification(const vector<vector<RealPoint> > &DP, const vector<vector<int> >& indexDP, const vector<vector<RealPoint> > &aContour, string filename, int nbMinPts=3, unsigned int w=200, unsigned int h=200);
 /**** Dominant points selection ****/
 
 /**** Tangent space transformation ****/

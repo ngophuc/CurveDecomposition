@@ -139,7 +139,7 @@ int main(int argc, char *argv[])
     }
     vector<vector<RealPoint> > newDP;
     std::string outNewDP=outputFile+(eps? "newDP.eps": "newDP.svg");
-    newDP=dominantPointSimplification(DP,indexDP,vecPts,outNewDP);
+    newDP=dominantPointSimplification(DP,indexDP,vecPts,outNewDP,nbPointCircle);
     vector<vector<int> > indexNewDP;
     for(size_t it_contour=0; it_contour<vecPts.size(); it_contour++)
     {

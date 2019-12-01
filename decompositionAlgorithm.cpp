@@ -378,8 +378,10 @@ vector<vector<RealPoint> > dominantPointDetection(const vector<vector<AlphaThick
 /***********************************/
 /**** Dominant points selection ****/
 /***********************************/
-vector<RealPoint> dominantPointSimplification(const vector<RealPoint>& DP, const vector<int>& indexDP, const vector<RealPoint>& aContour)
+vector<RealPoint> dominantPointSimplification(const vector<RealPoint>& DP, const vector<int>& indexDP, const vector<RealPoint>& aContour, int nbMinPts)
 {
+    if(DP.size()<=nbMinPts)
+        return DP;
     vector<RealPoint> selectedDP;
     for(vector<RealPoint>::const_iterator it = DP.begin(); it != DP.end(); it++)
         selectedDP.push_back(*it);
@@ -447,11 +449,11 @@ vector<RealPoint> dominantPointSimplification(const vector<RealPoint>& DP, const
     return selectedDP;
 }
 
-vector<vector<RealPoint> > dominantPointSimplification(const vector<vector<RealPoint> > &DP, const vector<vector<int> >& indexDP, const vector<vector<RealPoint> > &aContour, string filename, unsigned int w, unsigned int h)
+vector<vector<RealPoint> > dominantPointSimplification(const vector<vector<RealPoint> > &DP, const vector<vector<int> >& indexDP, const vector<vector<RealPoint> > &aContour, string filename, int nbMinPts, unsigned int w, unsigned int h)
 {
     vector<vector<RealPoint> > selectedDP;
     for(size_t it_contour=0; it_contour<aContour.size(); it_contour++)
-        selectedDP.push_back(dominantPointSimplification(DP.at(it_contour),indexDP.at(it_contour),aContour.at(it_contour)));
+        selectedDP.push_back(dominantPointSimplification(DP.at(it_contour),indexDP.at(it_contour),aContour.at(it_contour),nbMinPts));
 
     Board2D aBoard;
     if(w!=0 && h!=0)
