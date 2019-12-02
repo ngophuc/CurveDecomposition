@@ -380,7 +380,7 @@ vector<vector<RealPoint> > dominantPointDetection(const vector<vector<AlphaThick
 /***********************************/
 vector<RealPoint> dominantPointSimplification(const vector<RealPoint>& DP, const vector<int>& indexDP, const vector<RealPoint>& aContour, int nbMinPts)
 {
-    if(DP.size()<=nbMinPts)
+    if(DP.size()<=nbMinPts+1)
         return DP;
     vector<RealPoint> selectedDP;
     for(vector<RealPoint>::const_iterator it = DP.begin(); it != DP.end(); it++)
