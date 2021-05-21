@@ -20,9 +20,9 @@ Main installation:
 
 To install the tools you have to follow the following steps:
 
-- ImaGene installation (ImaGene-forIPOL)
+- ImaGene installation (ImaGene)
   From the CurveDecomposition directory do in a terminal:
-    cd ImaGene-forIPOL
+    cd ImaGene
     mkdir build; cd build
     cmake ..
     make -j 5
