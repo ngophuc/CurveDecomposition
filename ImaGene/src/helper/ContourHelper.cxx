@@ -271,7 +271,7 @@ ImaGene::ContourHelper::getPolygonFromStream(std::istream &in, uint indiceX, uin
       bool foundY=false;
       double x=0.0, y=0.0;
       while ( in_str.good()&& (!foundX || !foundY)){
-	bool isOK = (in_str >> val);
+	bool isOK = static_cast<bool>(in_str >> val);
 	if (isOK && (idx == indiceX) ){
 	  foundX=true;
 	  x=val;
@@ -318,7 +318,7 @@ ImaGene::ContourHelper::getPolygonsFromStream(std::istream &in){
       istringstream in_str( str );
       double x=0.0, y=0.0;
       while ( in_str.good()){
-	bool isOK = (in_str >> x);
+	bool isOK = static_cast<bool>(in_str >> x);
 	isOK = isOK &&  (in_str >>y);
 	if(isOK){
 	  aContour.push_back(Vector2D(x,y));
